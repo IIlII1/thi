@@ -1,37 +1,91 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif; /* Font chữ hiện đại hơn */
     text-align: center;
     margin: 0;
-    height: 100px;
-    background-color: white;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    background-color: #f4f4f4;
 }
 
-    #counter{
-        font-size: 50px;
-        font-weight: bold;
-        color: aqua;
-    }
-   #clickButton {
-    padding: px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: lightgreen;
-    border: none;
+
+.stats-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 15px;
     border-radius: 8px;
-}
-
-#time{
-    margin: 90px;
-    font-size: 50px;
+    color: white;
     font-weight: bold;
-    color: darkred;
+    font-size: 16px;
+    z-index: 10;
+    text-align: left;
 }
-#area {
 
-    flex: auto;
+#area {
+    width: 100%;
+    flex: 1; 
     background-color: blue;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    height: 500px;
+    display: flex;       
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    user-select: none;   
+    transition: background-color 0.1s ease; 
+}
+
+
+#display {
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+}
+
+
+#result {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffeb3b; 
+    margin-top: 10px;
+}
+
+
+.history-container {
+    height: 150px; 
+    background-color: white;
+    overflow-y: auto; 
+    border-top: 4px solid #333;
+    padding: 10px;
+}
+
+.history-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+.highlight {
+    color: red !important;
+    font-weight: bold;
 }

@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reaction Time</title>
+    <title>Reaction Time Pro</title>
     <link rel="stylesheet" href="duan.css">
 </head>
 <body>
-    <div class="area" id="area">
-        <p id="display">Bấm vào màn hình</p>
+    <div style="position: fixed; top: 10px; left: 10px; color: white; z-index: 100;">
+        <p>Kỷ lục: <span id="best-score">--</span> ms</p>
+        <p>Trung bình: <span id="avg-score">--</span> ms</p>
     </div>
-    <p id="result">Thời gian: --</p>
+
+    <div class="area" id="area">
+        <h1 id="display">Bấm vào màn hình để bắt đầu</h1>
+        <h2 id="result">Thời gian: --</h2>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <h3>Lịch sử lượt chơi:</h3>
+        <ul id="history-list" style="list-style: none; padding: 0;"></ul>
+    </div>
+
     <script src="js.js"></script>
 </body>
 </html>
